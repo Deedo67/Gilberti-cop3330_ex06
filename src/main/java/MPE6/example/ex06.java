@@ -18,7 +18,7 @@ public class ex06 {
         //date
         int year = Calendar.getInstance().get(Calendar.YEAR);
 
-        //inputs
+        //Inputs
         System.out.print("What is your current age? ");
         String firAge = in.nextLine();
         System.out.print("At what age would you like to retire? ");
