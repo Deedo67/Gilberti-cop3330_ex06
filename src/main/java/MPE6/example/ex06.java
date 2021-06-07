@@ -1,6 +1,7 @@
 package MPE6.example;
 
 import java.util.Scanner;
+import java.util.Calendar;
 
 /*
  *  UCF COP3330 Summer 2021 Assignment 2 Solution
@@ -14,10 +15,13 @@ public class ex06 {
         //scanner
         Scanner in = new Scanner(System.in);
 
+        //date
+        int year = Calendar.getInstance().get(Calendar.YEAR);
+
         //inputs
         System.out.print("What is your current age? ");
         String firAge = in.nextLine();
-        System.out.print("What is your current age? ");
+        System.out.print("At what age would you like to retire? ");
         String secAge = in.nextLine();
 
         //String convert
@@ -26,9 +30,10 @@ public class ex06 {
 
         //math
         int ret = secInt - firInt;
+        int retYear = year + ret;
 
         //Output string
-        String outputString = "You have " + ret + " years left until you can retire.";
+        String outputString = "You have " + ret + " years left until you can retire.\nIt's " + year + ", so you can retire in " + retYear + ".";
 
         //Output
         System.out.println(outputString);
